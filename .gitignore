@@ -3,5 +3,7 @@ cat <<EOF > .gitignore
 .env
 __pycache__/
 node_modules/
+certs/
+data/
 EOF
 

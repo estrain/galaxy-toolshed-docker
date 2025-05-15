@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1747318263.7101996
+_modified_time = 1747339871.809851
 _enable_loop = True
 _template_filename = '/home/galaxy/galaxy/lib/tool_shed/webapp/templates/webapps/tool_shed/index.mako'
 _template_uri = '/webapps/tool_shed/index.mako'
@@ -20,8 +20,8 @@ def _mako_get_namespace(context, name):
         _mako_generate_namespaces(context)
         return context.namespaces[(__name__, name)]
 def _mako_generate_namespaces(context):
-    ns = runtime.TemplateNamespace('__anon_0x7fbfde129d30', context._clean_inheritance_tokens(), templateuri='/message.mako', callables=None,  calling_uri=_template_uri)
-    context.namespaces[(__name__, '__anon_0x7fbfde129d30')] = ns
+    ns = runtime.TemplateNamespace('__anon_0x7f0892ec8160', context._clean_inheritance_tokens(), templateuri='/message.mako', callables=None,  calling_uri=_template_uri)
+    context.namespaces[(__name__, '__anon_0x7f0892ec8160')] = ns
 
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
@@ -31,7 +31,7 @@ def render_body(context,**pageargs):
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde129d30')._populate(_import_ns, ['render_msg'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8160')._populate(_import_ns, ['render_msg'])
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n\n')
@@ -49,7 +49,7 @@ def render_stylesheets(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde129d30')._populate(_import_ns, ['render_msg'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8160')._populate(_import_ns, ['render_msg'])
         parent = _import_ns.get('parent', context.get('parent', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
@@ -65,7 +65,7 @@ def render_javascripts(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde129d30')._populate(_import_ns, ['render_msg'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8160')._populate(_import_ns, ['render_msg'])
         parent = _import_ns.get('parent', context.get('parent', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n    ')
@@ -80,7 +80,7 @@ def render_init(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde129d30')._populate(_import_ns, ['render_msg'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8160')._populate(_import_ns, ['render_msg'])
         self = _import_ns.get('self', context.get('self', UNDEFINED))
         parent = _import_ns.get('parent', context.get('parent', UNDEFINED))
         trans = _import_ns.get('trans', context.get('trans', UNDEFINED))
@@ -105,15 +105,15 @@ def render_left_panel(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde129d30')._populate(_import_ns, ['render_msg'])
-        repository_id = _import_ns.get('repository_id', context.get('repository_id', UNDEFINED))
-        user_id = _import_ns.get('user_id', context.get('user_id', UNDEFINED))
-        util = _import_ns.get('util', context.get('util', UNDEFINED))
+        _mako_get_namespace(context, '__anon_0x7f0892ec8160')._populate(_import_ns, ['render_msg'])
         has_deprecated_repositories = _import_ns.get('has_deprecated_repositories', context.get('has_deprecated_repositories', UNDEFINED))
         repository_metadata = _import_ns.get('repository_metadata', context.get('repository_metadata', UNDEFINED))
+        util = _import_ns.get('util', context.get('util', UNDEFINED))
+        repository_id = _import_ns.get('repository_id', context.get('repository_id', UNDEFINED))
+        user_id = _import_ns.get('user_id', context.get('user_id', UNDEFINED))
         can_administer_repositories = _import_ns.get('can_administer_repositories', context.get('can_administer_repositories', UNDEFINED))
-        trans = _import_ns.get('trans', context.get('trans', UNDEFINED))
         h = _import_ns.get('h', context.get('h', UNDEFINED))
+        trans = _import_ns.get('trans', context.get('trans', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n    <div class="unified-panel-header" unselectable="on">\n        <div class=\'unified-panel-header-inner\'>')
         __M_writer(filters.html_escape(str(trans.app.shed_counter.unique_valid_tools )))
@@ -187,14 +187,14 @@ def render_center_panel(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde129d30')._populate(_import_ns, ['render_msg'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8160')._populate(_import_ns, ['render_msg'])
+        changeset_revision = _import_ns.get('changeset_revision', context.get('changeset_revision', UNDEFINED))
+        message = _import_ns.get('message', context.get('message', UNDEFINED))
         repository_id = _import_ns.get('repository_id', context.get('repository_id', UNDEFINED))
         user_id = _import_ns.get('user_id', context.get('user_id', UNDEFINED))
-        message = _import_ns.get('message', context.get('message', UNDEFINED))
-        changeset_revision = _import_ns.get('changeset_revision', context.get('changeset_revision', UNDEFINED))
-        status = _import_ns.get('status', context.get('status', UNDEFINED))
-        trans = _import_ns.get('trans', context.get('trans', UNDEFINED))
         h = _import_ns.get('h', context.get('h', UNDEFINED))
+        trans = _import_ns.get('trans', context.get('trans', UNDEFINED))
+        status = _import_ns.get('status', context.get('status', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n    ')
 

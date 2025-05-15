@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1747318747.3255925
+_modified_time = 1747339872.4124465
 _enable_loop = True
 _template_filename = '/home/galaxy/galaxy/lib/tool_shed/webapp/templates/webapps/tool_shed/common/grid_common.mako'
 _template_uri = '/webapps/tool_shed/category/../common/grid_common.mako'
@@ -34,15 +34,15 @@ def render_body(context,**pageargs):
 def render_render_grid_column_filter(context,grid,column):
     __M_caller = context.caller_stack._push_frame()
     try:
-        list = context.get('list', UNDEFINED)
-        isinstance = context.get('isinstance', UNDEFINED)
         enumerate = context.get('enumerate', UNDEFINED)
+        list = context.get('list', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        isinstance = context.get('isinstance', UNDEFINED)
+        dict = context.get('dict', UNDEFINED)
         basestring = context.get('basestring', UNDEFINED)
+        cur_filter_dict = context.get('cur_filter_dict', UNDEFINED)
         url = context.get('url', UNDEFINED)
         h = context.get('h', UNDEFINED)
-        len = context.get('len', UNDEFINED)
-        cur_filter_dict = context.get('cur_filter_dict', UNDEFINED)
-        dict = context.get('dict', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    <tr>\n        ')
 
@@ -182,13 +182,13 @@ def render_render_grid_column_filter(context,grid,column):
 def render_render_grid_filters(context,grid,render_advanced_search=True):
     __M_caller = context.caller_stack._push_frame()
     try:
+        endif = context.get('endif', UNDEFINED)
+        cur_filter_dict = context.get('cur_filter_dict', UNDEFINED)
+        default_filter_dict = context.get('default_filter_dict', UNDEFINED)
+        url = context.get('url', UNDEFINED)
         def render_grid_column_filter(grid,column):
             return render_render_grid_column_filter(context,grid,column)
-        url = context.get('url', UNDEFINED)
-        endif = context.get('endif', UNDEFINED)
-        default_filter_dict = context.get('default_filter_dict', UNDEFINED)
         kwargs = context.get('kwargs', UNDEFINED)
-        cur_filter_dict = context.get('cur_filter_dict', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    ')
 

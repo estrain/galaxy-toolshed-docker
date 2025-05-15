@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1747318263.7142768
+_modified_time = 1747339871.8153884
 _enable_loop = True
 _template_filename = '/home/galaxy/galaxy/lib/tool_shed/webapp/templates/message.mako'
 _template_uri = '/message.mako'
@@ -36,8 +36,8 @@ def _mako_get_namespace(context, name):
         _mako_generate_namespaces(context)
         return context.namespaces[(__name__, name)]
 def _mako_generate_namespaces(context):
-    ns = runtime.TemplateNamespace('__anon_0x7fbfde1585e0', context._clean_inheritance_tokens(), templateuri='/refresh_frames.mako', callables=None,  calling_uri=_template_uri)
-    context.namespaces[(__name__, '__anon_0x7fbfde1585e0')] = ns
+    ns = runtime.TemplateNamespace('__anon_0x7f0892ec8ca0', context._clean_inheritance_tokens(), templateuri='/refresh_frames.mako', callables=None,  calling_uri=_template_uri)
+    context.namespaces[(__name__, '__anon_0x7f0892ec8ca0')] = ns
 
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
@@ -47,7 +47,7 @@ def render_body(context,**pageargs):
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde1585e0')._populate(_import_ns, ['handle_refresh_frames'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8ca0')._populate(_import_ns, ['handle_refresh_frames'])
         n_ = _import_ns.get('n_', context.get('n_', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
@@ -73,7 +73,7 @@ def render_init(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde1585e0')._populate(_import_ns, ['handle_refresh_frames'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8ca0')._populate(_import_ns, ['handle_refresh_frames'])
         self = _import_ns.get('self', context.get('self', UNDEFINED))
         active_view = _import_ns.get('active_view', context.get('active_view', UNDEFINED))
         __M_writer = context.writer()
@@ -94,7 +94,7 @@ def render_javascript_app(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde1585e0')._populate(_import_ns, ['handle_refresh_frames'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8ca0')._populate(_import_ns, ['handle_refresh_frames'])
         handle_refresh_frames = _import_ns.get('handle_refresh_frames', context.get('handle_refresh_frames', UNDEFINED))
         parent = _import_ns.get('parent', context.get('parent', UNDEFINED))
         __M_writer = context.writer()
@@ -112,11 +112,11 @@ def render_center_panel(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde1585e0')._populate(_import_ns, ['handle_refresh_frames'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8ca0')._populate(_import_ns, ['handle_refresh_frames'])
         def render_msg(msg,status='done'):
             return render_render_msg(context,msg,status)
-        status = _import_ns.get('status', context.get('status', UNDEFINED))
         message = _import_ns.get('message', context.get('message', UNDEFINED))
+        status = _import_ns.get('status', context.get('status', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(render_msg( message, status )))
@@ -130,11 +130,11 @@ def render_body(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde1585e0')._populate(_import_ns, ['handle_refresh_frames'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8ca0')._populate(_import_ns, ['handle_refresh_frames'])
         def render_msg(msg,status='done'):
             return render_render_msg(context,msg,status)
-        status = _import_ns.get('status', context.get('status', UNDEFINED))
         message = _import_ns.get('message', context.get('message', UNDEFINED))
+        status = _import_ns.get('status', context.get('status', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(render_msg( message, status )))
@@ -148,7 +148,7 @@ def render_render_msg(context,msg,status='done'):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
-        _mako_get_namespace(context, '__anon_0x7fbfde1585e0')._populate(_import_ns, ['handle_refresh_frames'])
+        _mako_get_namespace(context, '__anon_0x7f0892ec8ca0')._populate(_import_ns, ['handle_refresh_frames'])
         __M_writer = context.writer()
         __M_writer('\n    ')
 

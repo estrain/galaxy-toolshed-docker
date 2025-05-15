@@ -7,9 +7,10 @@ services:
       dockerfile: Dockerfile
     container_name: toolshed
     ports:
-      - "9010:9010"  # NGINX (external) -> Galaxy Tool Shed (internal)
+      - "443:443"  # NGINX (external) -> Galaxy Tool Shed (internal)
     volumes:
       - ./data:/home/galaxy/galaxy/database         # Required for persistent DB
+      - ./certs:/home/galaxy/certs             
       - ./config/tool_shed.yml:/home/galaxy/galaxy/config/tool_shed.yml
     restart: unless-stopped
 

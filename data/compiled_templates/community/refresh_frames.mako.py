@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1747318263.716761
+_modified_time = 1747339871.8234925
 _enable_loop = True
 _template_filename = '/home/galaxy/galaxy/lib/tool_shed/webapp/templates/refresh_frames.mako'
 _template_uri = '/refresh_frames.mako'
@@ -28,9 +28,9 @@ def render_handle_refresh_frames(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         refresh_frames = context.get('refresh_frames', UNDEFINED)
+        h = context.get('h', UNDEFINED)
         trans = context.get('trans', UNDEFINED)
         app = context.get('app', UNDEFINED)
-        h = context.get('h', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n')
         __M_writer('    ')

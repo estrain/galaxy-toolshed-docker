@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1747318747.3131971
+_modified_time = 1747339872.3961942
 _enable_loop = True
 _template_filename = '/home/galaxy/galaxy/lib/tool_shed/webapp/templates/webapps/tool_shed/category/grid.mako'
 _template_uri = '/webapps/tool_shed/category/grid.mako'
@@ -37,8 +37,8 @@ def render_body(context,**pageargs):
         _mako_get_namespace(context, 'grid_base')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'grid_common')._populate(_import_ns, ['*'])
         self = _import_ns.get('self', context.get('self', UNDEFINED))
-        capture = _import_ns.get('capture', context.get('capture', UNDEFINED))
         grid_base = _mako_get_namespace(context, 'grid_base')
+        capture = _import_ns.get('capture', context.get('capture', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')

@@ -71,7 +71,8 @@ RUN python3 -m venv .venv && \
 RUN source .venv/bin/activate && make client
 
 # Expose Tool Shed HTTP port
-EXPOSE 9010 
+EXPOSE 80 
+EXPOSE 443 
 
 # Switch to root to copy config and setup nginx
 USER root
@@ -82,7 +83,8 @@ COPY config/galaxy.yml /home/galaxy/galaxy/config/galaxy.yml
 COPY config/tool_shed.yml /home/galaxy/galaxy/config/tool_shed.yml
 
 # Set config file ownership
-RUN chown -R galaxy:galaxy /home/galaxy/galaxy/config
+RUN chown galaxy:galaxy /home/galaxy/galaxy/config/galaxy.yml
+RUN chown galaxy:galaxy /home/galaxy/galaxy/config/tool_shed.yml
 
 # Setup logging
 RUN mkdir -p /home/galaxy/galaxy/logs && \

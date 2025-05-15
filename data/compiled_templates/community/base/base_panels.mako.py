@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1747318263.7368233
+_modified_time = 1747339871.846484
 _enable_loop = True
 _template_filename = '/home/galaxy/galaxy/lib/tool_shed/webapp/templates/base/base_panels.mako'
 _template_uri = '/base/base_panels.mako'
@@ -27,10 +27,10 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        self = context.get('self', UNDEFINED)
-        app = context.get('app', UNDEFINED)
         hasattr = context.get('hasattr', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         h = context.get('h', UNDEFINED)
+        app = context.get('app', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE HTML>\n')
         __M_writer('\n\n')
@@ -199,9 +199,9 @@ def render_javascript_app(context):
 def render_late_javascripts(context):
     __M_caller = context.caller_stack._push_frame()
     try:
+        galaxy_client = _mako_get_namespace(context, 'galaxy_client')
         t = context.get('t', UNDEFINED)
         app = context.get('app', UNDEFINED)
-        galaxy_client = _mako_get_namespace(context, 'galaxy_client')
         __M_writer = context.writer()
         __M_writer('\n    <!--- base/base_panels.mako late_javascripts() -->\n\n')
         if t.webapp.name == 'galaxy' and app.config.ga_code:

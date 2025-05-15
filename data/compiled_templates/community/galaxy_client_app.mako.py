@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1747318263.7243178
+_modified_time = 1747339871.831247
 _enable_loop = True
 _template_filename = '/home/galaxy/galaxy/lib/tool_shed/webapp/templates/galaxy_client_app.mako'
 _template_uri = '/galaxy_client_app.mako'
@@ -35,8 +35,8 @@ def render_body(context,**pageargs):
 def render_render_json(context,dictionary):
     __M_caller = context.caller_stack._push_frame()
     try:
-        trans = context.get('trans', UNDEFINED)
         h = context.get('h', UNDEFINED)
+        trans = context.get('trans', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer(str( h.dumps( dictionary, indent=( 2 if trans.debug else 0 ) ) ))
@@ -49,12 +49,12 @@ def render_render_json(context,dictionary):
 def render_load(context,app=None,**kwargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        def get_user_dict():
-            return render_get_user_dict(context)
         def render_json(dictionary):
             return render_render_json(context,dictionary)
         h = context.get('h', UNDEFINED)
         trans = context.get('trans', UNDEFINED)
+        def get_user_dict():
+            return render_get_user_dict(context)
         __M_writer = context.writer()
         __M_writer('\n    <script type="text/javascript">\n        // galaxy_client_app.mako, load\n\n        var bootstrapped;\n        try {\n            bootstrapped = ')
         __M_writer(str(render_json(kwargs)))
@@ -161,12 +161,12 @@ def render_config_matomo_analytics(context,matomo_server,matomo_site_id):
 def render_get_user_dict(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        float = context.get('float', UNDEFINED)
         Exception = context.get('Exception', UNDEFINED)
         util = context.get('util', UNDEFINED)
-        AssertionError = context.get('AssertionError', UNDEFINED)
         int = context.get('int', UNDEFINED)
+        float = context.get('float', UNDEFINED)
         trans = context.get('trans', UNDEFINED)
+        AssertionError = context.get('AssertionError', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('    ')
@@ -222,9 +222,9 @@ def render_get_user_dict(context):
 def render_get_user_json(context):
     __M_caller = context.caller_stack._push_frame()
     try:
+        h = context.get('h', UNDEFINED)
         def get_user_dict():
             return render_get_user_dict(context)
-        h = context.get('h', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer(str( h.dumps( get_user_dict() )))

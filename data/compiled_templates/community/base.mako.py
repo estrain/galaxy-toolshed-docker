@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1747318263.719536
+_modified_time = 1747339871.8267248
 _enable_loop = True
 _template_filename = '/home/galaxy/galaxy/lib/tool_shed/webapp/templates/base.mako'
 _template_uri = '/base.mako'
@@ -27,9 +27,9 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        next = context.get('next', UNDEFINED)
         self = context.get('self', UNDEFINED)
         n_ = context.get('n_', UNDEFINED)
-        next = context.get('next', UNDEFINED)
         app = context.get('app', UNDEFINED)
         h = context.get('h', UNDEFINED)
         __M_writer = context.writer()
@@ -144,9 +144,9 @@ def render_javascript_entry(context):
 def render_javascript_app(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        form_input_auto_focus = context.get('form_input_auto_focus', UNDEFINED)
-        self = context.get('self', UNDEFINED)
         galaxy_client = _mako_get_namespace(context, 'galaxy_client')
+        self = context.get('self', UNDEFINED)
+        form_input_auto_focus = context.get('form_input_auto_focus', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n    ')
         __M_writer(str( galaxy_client.load( app=self.js_app ) ))
