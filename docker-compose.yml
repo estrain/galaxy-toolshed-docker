@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  toolshed:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: toolshed
+    ports:
+      - "9010:9010"  # NGINX (external) -> Galaxy Tool Shed (internal)
+    volumes:
+      - ./data:/home/galaxy/galaxy/database         # Required for persistent DB
+      - ./config/tool_shed.yml:/home/galaxy/galaxy/config/tool_shed.yml
+    restart: unless-stopped
+
