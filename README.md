@@ -10,7 +10,7 @@ Built on **Galaxy 23.1**, this container includes:
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Docker
@@ -22,4 +22,6 @@ Built on **Galaxy 23.1**, this container includes:
 git clone https://github.com/estrain/galaxy-toolshed-docker.git
 cd galaxy-toolshed-docker
 docker-compose up --build
-
+```
+### Create Admin Account
+Log into image, such as http://localhost:9010, and register an account for admin@example.com. This will create an administration account and then you can create tool categories to begin uploading and hosting tool repositories.
