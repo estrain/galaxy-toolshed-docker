@@ -30,7 +30,7 @@ Create a data folder and a certs folder in the galaxy-toolshed-docker folder. Th
 Log into image, such as http://localhost:9010, and register an account for admin@example.com. This will create an administration account and then you can create tool categories to begin uploading and hosting tool repositories.
 
 ### Tool Index
-The tool index is built at start up.  If you add a tool you will need to go into the container and update the index.
+The tool index is built during start up.  If you add a tool you will either need to wait 5 minutes for the indexing cron job to run or go into the container and execute the commands below.
 
 ```bash
 source .venv/bin/activate
