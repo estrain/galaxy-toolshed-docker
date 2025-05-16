@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y \
     libreadline-dev \
     libsqlite3-dev \
     sudo \
+    cron \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -37,6 +38,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g yarn@1.22.19 \
     && node -v && yarn -v
+
+# Copy your crontab file and script into the image
+COPY config/toolshed.crontab /etc/cron.d/toolshed-cron
+RUN chmod 0644 /etc/cron.d/toolshed-cron
+RUN crontab /etc/cron.d/toolshed-cron
 
 # Create galaxy user with sudo access
 RUN useradd -m -u 1001 -s /bin/bash galaxy && \
@@ -51,7 +57,6 @@ RUN git clone -b release_23.1 https://github.com/galaxyproject/galaxy.git /home/
 SHELL ["/bin/bash", "-c"]
 
 # Switch to galaxy user
-USER galaxy
 WORKDIR /home/galaxy/galaxy
 
 # Clean up .git
@@ -81,10 +86,13 @@ USER root
 COPY config/nginx.conf /etc/nginx/nginx.conf
 COPY config/galaxy.yml /home/galaxy/galaxy/config/galaxy.yml
 COPY config/tool_shed.yml /home/galaxy/galaxy/config/tool_shed.yml
+COPY scripts/rebuild_whoosh.sh /home/galaxy/galaxy/scripts/rebuild_whoosh.sh
 
 # Set config file ownership
 RUN chown galaxy:galaxy /home/galaxy/galaxy/config/galaxy.yml
 RUN chown galaxy:galaxy /home/galaxy/galaxy/config/tool_shed.yml
+RUN chown galaxy:galaxy /home/galaxy/galaxy/scripts/rebuild_whoosh.sh
+RUN chmod +x /home/galaxy/galaxy/scripts/rebuild_whoosh.sh
 
 # Setup logging
 RUN mkdir -p /home/galaxy/galaxy/logs && \

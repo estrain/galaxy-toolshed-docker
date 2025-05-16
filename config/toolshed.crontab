@@ -1,0 +1,1 @@
+*/5 * * * * galaxy /home/galaxy/galaxy/scripts/rebuild_whoosh.sh >> /home/galaxy/galaxy/logs/whoosh_cron.log 2>&1

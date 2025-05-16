@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# Start cron for whoosh index
+cron &
+
 # Set working dir
 cd /home/galaxy/galaxy
 
